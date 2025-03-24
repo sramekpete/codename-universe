@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<Platforms>AnyCPU;ARM64;x64</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<InvariantGlobalization>false</InvariantGlobalization>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AnalysisMode>All</AnalysisMode>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="8.1.*" />
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="9.1.*" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DropoutCoder.StarWars.Data\DropoutCoder.StarWars.Data.csproj" />
+		<ProjectReference Include="..\DropoutCoder.StarWars.ServiceDefaults\DropoutCoder.StarWars.ServiceDefaults.csproj" />
+	</ItemGroup>
+</Project>
