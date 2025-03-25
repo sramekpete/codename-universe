@@ -1,27 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<InvariantGlobalization>true</InvariantGlobalization>
-		<Platforms>AnyCPU;ARM64;x64</Platforms>
-	</PropertyGroup>
-	<PropertyGroup>
-		<InvariantGlobalization>false</InvariantGlobalization>
-	</PropertyGroup>
-	<PropertyGroup>
-		<AnalysisMode>All</AnalysisMode>
-		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-		<EnableNETAnalyzers>true</EnableNETAnalyzers>
-		<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="8.1.*" />
-		<PackageReference Include="Microsoft.AspNetCore.OData" Version="9.2.1" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.0.0" />
-	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\Glx.Data\Glx.Data.csproj" />
-	  <ProjectReference Include="..\Glx.ServiceDefaults\Glx.ServiceDefaults.csproj" />
-	</ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Platforms>AnyCPU;ARM64;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AnalysisMode>All</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="8.1.*" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Glx.Data\Glx.Data.csproj" />
+    <ProjectReference Include="..\Glx.ServiceDefaults\Glx.ServiceDefaults.csproj" />
+  </ItemGroup>
 </Project>
