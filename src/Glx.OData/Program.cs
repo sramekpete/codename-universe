@@ -90,8 +90,8 @@ namespace DropoutCoder.StarWars.OData {
             builder.Services
                 .AddODataQueryCounter();
 
-            //builder.Services
-            //    .AddODataQueryMetricMiddelware();
+            builder.Services
+                .AddODataQueryMetricMiddelware();
 
             var app = builder.Build();
 

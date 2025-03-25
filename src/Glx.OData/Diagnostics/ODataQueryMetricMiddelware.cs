@@ -12,7 +12,7 @@ using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
 
 public class ODataQueryMetricMiddelware : IMiddleware {
-    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(StarWarsODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter, ODataQueryOptions options) {
+    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(StarWarsODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter, QueryOption) {
         QueryCounter = queryCounter ?? throw new ArgumentNullException(nameof(queryCounter));
     }
 
@@ -30,4 +30,5 @@ public class ODataQueryMetricMiddelware : IMiddleware {
 
         return next.Invoke(context);
     }
+}
 }
