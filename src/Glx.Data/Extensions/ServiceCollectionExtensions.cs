@@ -1,6 +1,6 @@
-﻿namespace DropoutCoder.StarWars.Data.Extensions {
-    using DropoutCoder.StarWars.Data;
-    using DropoutCoder.StarWars.Data.Schema;
+﻿namespace Glx.Data.Extensions {
+    using Glx.Data;
+    using Glx.Data.Schema;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
     using System.Linq.Expressions;

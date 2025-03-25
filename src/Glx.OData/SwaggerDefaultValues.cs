@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.OData;
+﻿namespace Glx.OData;
 
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;

@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.Data.Schema {
+﻿namespace Glx.Data.Schema {
     using System;
 
     public class MovieSchema {

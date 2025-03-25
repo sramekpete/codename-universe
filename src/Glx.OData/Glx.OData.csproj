@@ -21,7 +21,7 @@
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\DropoutCoder.StarWars.Data\DropoutCoder.StarWars.Data.csproj" />
-		<ProjectReference Include="..\DropoutCoder.StarWars.ServiceDefaults\DropoutCoder.StarWars.ServiceDefaults.csproj" />
+	  <ProjectReference Include="..\Glx.Data\Glx.Data.csproj" />
+	  <ProjectReference Include="..\Glx.ServiceDefaults\Glx.ServiceDefaults.csproj" />
 	</ItemGroup>
 </Project>

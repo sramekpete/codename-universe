@@ -1,5 +1,6 @@
-﻿namespace DropoutCoder.StarWars.OData.Diagnostics.Extensions;
+﻿namespace Glx.OData.Diagnostics.Extensions;
 
+using Glx.OData.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 

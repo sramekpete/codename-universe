@@ -1,13 +1,11 @@
-﻿namespace DropoutCoder.StarWars.OData.Controllers {
+﻿namespace Glx.OData.Controllers {
     using Asp.Versioning;
-    using DropoutCoder.StarWars.Data.Schema;
-    using DropoutCoder.StarWars.OData.Diagnostics;
-    using DropoutCoder.StarWars.OData.Versioning;
+    using Glx.Data.Schema;
+    using Glx.OData.Versioning;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.OData.Query;
     using Microsoft.AspNetCore.OData.Routing.Controllers;
     using Microsoft.EntityFrameworkCore;
-    using System.Diagnostics;
 
     public class PlanetController(IQueryable<PlanetSchema> Planets) : ODataController {
         [EnableQuery]

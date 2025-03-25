@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.Data.Schema {
+﻿namespace Glx.Data.Schema {
     public class VehicleSchema {
         public long Id { get; set; }
 

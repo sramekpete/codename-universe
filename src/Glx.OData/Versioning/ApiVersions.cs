@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.OData.Versioning;
+﻿namespace Glx.OData.Versioning;
 public static class ApiVersions {
     public const string VersionRouteParameterName = "version";
     public const string VersionRouteConstraintName = "apiVersion";

@@ -1,8 +1,8 @@
-﻿namespace DropoutCoder.StarWars.OData.Models.Configurations;
+﻿namespace Glx.OData.OData.Configurations;
 
 using Asp.Versioning;
 using Asp.Versioning.OData;
-using DropoutCoder.StarWars.Data.Schema;
+using Glx.Data.Schema;
 using Microsoft.OData.ModelBuilder;
 
 public sealed class CharacterModelConfiguration : IModelConfiguration {
@@ -24,7 +24,7 @@ public sealed class CharacterModelConfiguration : IModelConfiguration {
     }
 
     private static void ConfigureVersion1_0(EntityTypeConfiguration<CharacterSchema> type, ApiVersion apiVersion) {
-        if ((apiVersion.MajorVersion == 1 && apiVersion.MinorVersion < 0) || apiVersion.MajorVersion < 1) {
+        if (apiVersion.MajorVersion == 1 && apiVersion.MinorVersion < 0 || apiVersion.MajorVersion < 1) {
             return;
         }
 
@@ -54,7 +54,7 @@ public sealed class CharacterModelConfiguration : IModelConfiguration {
     }
 
     private static void ConfigureVersion1_1(EntityTypeConfiguration<CharacterSchema> type, ApiVersion apiVersion) {
-        if ((apiVersion.MajorVersion == 1 && apiVersion.MinorVersion < 1) || apiVersion.MajorVersion < 1) {
+        if (apiVersion.MajorVersion == 1 && apiVersion.MinorVersion < 1 || apiVersion.MajorVersion < 1) {
             return;
         }
 

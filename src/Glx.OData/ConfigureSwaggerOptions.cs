@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.OData;
+﻿namespace Glx.OData;
 
 using Asp.Versioning.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;

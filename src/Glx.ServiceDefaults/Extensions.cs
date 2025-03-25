@@ -8,7 +8,7 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 
-namespace DropoutCoder.StarWars.ServiceDefaults;
+namespace Glx.ServiceDefaults;
 
 public static class Extensions {
     public static IHostApplicationBuilder AddServiceDefaults(this IHostApplicationBuilder builder) {

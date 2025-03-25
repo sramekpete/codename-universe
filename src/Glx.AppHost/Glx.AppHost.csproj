@@ -11,6 +11,6 @@
 	  <PackageReference Include="Aspire.Hosting.AppHost" Version="8.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DropoutCoder.StarWars.OData\DropoutCoder.StarWars.OData.csproj" />
+    <ProjectReference Include="..\Glx.OData\Glx.OData.csproj" />
   </ItemGroup>
 </Project>

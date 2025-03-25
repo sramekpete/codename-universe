@@ -1,5 +1,5 @@
-﻿namespace DropoutCoder.StarWars.Data {
-    using DropoutCoder.StarWars.Data.Schema.Configuration;
+﻿namespace Glx.Data {
+    using Glx.Data.Schema.Configuration;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 

@@ -1,18 +1,12 @@
-﻿namespace DropoutCoder.StarWars.OData.Diagnostics;
+﻿namespace Glx.OData.Diagnostics;
 
-using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.OData.Extensions;
-using Microsoft.AspNetCore.OData.Query;
-using Microsoft.AspNetCore.OData.Routing;
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.OData.Edm;
-using Microsoft.OData.ModelBuilder.Annotations;
-using Microsoft.OData.UriParser;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
 
 public class ODataQueryMetricMiddelware : IMiddleware {
-    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(StarWarsODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter, QueryOption) {
+    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(StarWarsODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter) {
         QueryCounter = queryCounter ?? throw new ArgumentNullException(nameof(queryCounter));
     }
 
@@ -30,5 +24,4 @@ public class ODataQueryMetricMiddelware : IMiddleware {
 
         return next.Invoke(context);
     }
-}
 }

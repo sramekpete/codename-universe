@@ -1,11 +1,10 @@
-
-namespace DropoutCoder.StarWars.OData {
+namespace Glx.OData {
     using Asp.Versioning;
-    using DropoutCoder.StarWars.Data.Extensions;
-    using DropoutCoder.StarWars.OData.Diagnostics;
-    using DropoutCoder.StarWars.OData.Diagnostics.Extensions;
-    using DropoutCoder.StarWars.OData.Versioning;
-    using DropoutCoder.StarWars.ServiceDefaults;
+    using Glx.Data.Extensions;
+    using Glx.OData.Diagnostics;
+    using Glx.OData.Diagnostics.Extensions;
+    using Glx.OData.Versioning;
+    using Glx.ServiceDefaults;
     using Microsoft.AspNetCore.OData;
     using Microsoft.Extensions.Options;
     using Microsoft.OData.ModelBuilder;
