@@ -16,8 +16,8 @@
 		<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="8.1.*" />
-		<PackageReference Include="Microsoft.AspNetCore.OData" Version="9.1.*" />
+		<PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="8.*" />
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.*" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
 	</ItemGroup>
 	<ItemGroup>
