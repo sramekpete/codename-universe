@@ -6,7 +6,7 @@ using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
 
 public class ODataQueryMetricMiddelware : IMiddleware {
-    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(StarWarsODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter) {
+    public ODataQueryMetricMiddelware([FromKeyedServices(nameof(GlxODataDiagnostics.ODataQueryCounter))] Counter<long> queryCounter) {
         QueryCounter = queryCounter ?? throw new ArgumentNullException(nameof(queryCounter));
     }
 

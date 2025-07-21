@@ -14,7 +14,7 @@
         public ActionResult<IEnumerable<MovieSchema>> Get(ODataQueryOptions<MovieSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataMovieQueryCounter.Add(1, new TagList { { nameof(version), version } });
+            //GlxODataDiagnostics.ODataMovieQueryCounter.Add(1, new TagList { { nameof(version), version } });
 
             return Ok(Movies);
         }
@@ -24,7 +24,7 @@
         public async Task<ActionResult<MovieSchema>> Get(long key, ODataQueryOptions<MovieSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataMovieDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
+            //GlxODataDiagnostics.ODataMovieDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
 
             var result = await Movies
                 .Where(ch => ch.Id == key)

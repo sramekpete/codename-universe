@@ -15,7 +15,7 @@
         public ActionResult<IEnumerable<CharacterSchema>> Get([FromServices] ODataQueryOptions<CharacterSchema> options, [FromServices] IQueryable<CharacterSchema> characters) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataCharacterQueryCounter.Add(1, new TagList { { nameof(version), version } });
+            //GlxODataDiagnostics.ODataCharacterQueryCounter.Add(1, new TagList { { nameof(version), version } });
 
             return Ok(characters);
         }
@@ -26,7 +26,7 @@
         public async Task<ActionResult<CharacterSchema>> Get(long key, ODataQueryOptions<CharacterSchema> options, [FromServices] IQueryable<CharacterSchema> characters) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataCharacterDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
+            //GlxODataDiagnostics.ODataCharacterDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
 
             var result = await characters
                 .Where(ch => ch.Id == key)
@@ -45,7 +45,7 @@
         public ActionResult<MovieSchema> GetMovies(long key, ODataQueryOptions<MovieSchema> options, [FromServices] IQueryable<MovieSchema> movies) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataCharacterDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
+            //GlxODataDiagnostics.ODataCharacterDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
 
             var result = movies.Where(m => m.Characters.Any(c => c.Id == key));
 

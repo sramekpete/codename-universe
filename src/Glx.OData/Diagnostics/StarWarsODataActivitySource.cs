@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Reflection;
 
-public static class StarWarsODataDiagnostics {
+public static class GlxODataDiagnostics {
     public static ActivitySource ActivitySource = new ActivitySource(Assembly.GetExecutingAssembly().FullName, Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
     public static Meter ODataQueryMeter = new Meter(Assembly.GetExecutingAssembly().FullName);

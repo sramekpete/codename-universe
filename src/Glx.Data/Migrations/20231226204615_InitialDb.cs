@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DropoutCoder.StarWars.Api.Data.Migrations {
+namespace Glx.Data.Migrations {
     /// <inheritdoc />
     public partial class InitialDb : Migration {
         /// <inheritdoc />

@@ -1,6 +1,6 @@
-@DropoutCoder.StarWars.OData_HostAddress = http://localhost:5225
+@DropoutCoder.Glx.OData_HostAddress = http://localhost:5225
 
-GET {{DropoutCoder.StarWars.OData_HostAddress}}/weatherforecast/
+GET {{DropoutCoder.Glx.OData_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

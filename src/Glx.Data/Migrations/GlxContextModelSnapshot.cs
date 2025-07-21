@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DropoutCoder.StarWars.Api.Data.Migrations
+namespace Glx.Data.Migrations
 {
-    [DbContext(typeof(StarWarsContext))]
-    partial class StarWarsContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(GlxContext))]
+    partial class GlxContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -67,7 +67,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Characters_Vehicles");
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.CharacterSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -115,7 +115,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Characters", (string)null);
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.MovieSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -153,7 +153,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Movies", (string)null);
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.PlanetSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.PlanetSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -204,7 +204,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Planets", (string)null);
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.SpeciesSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.SpeciesSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -260,7 +260,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Species", (string)null);
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.StarshipSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.StarshipSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -327,7 +327,7 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.ToTable("Starships", (string)null);
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.VehicleSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.VehicleSchema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -463,12 +463,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Characters_Species", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", null)
+                    b.HasOne("Glx.Data.Schema.CharacterSchema", null)
                         .WithMany()
                         .HasForeignKey("CharactersId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.SpeciesSchema", null)
+                    b.HasOne("Glx.Data.Schema.SpeciesSchema", null)
                         .WithMany()
                         .HasForeignKey("SpeciesId")
                         .IsRequired();
@@ -476,12 +476,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Characters_Starships", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", null)
+                    b.HasOne("Glx.Data.Schema.CharacterSchema", null)
                         .WithMany()
                         .HasForeignKey("PilotsId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.StarshipSchema", null)
+                    b.HasOne("Glx.Data.Schema.StarshipSchema", null)
                         .WithMany()
                         .HasForeignKey("StarshipsId")
                         .IsRequired();
@@ -489,20 +489,20 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Characters_Vehicles", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", null)
+                    b.HasOne("Glx.Data.Schema.CharacterSchema", null)
                         .WithMany()
                         .HasForeignKey("PilotsId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.VehicleSchema", null)
+                    b.HasOne("Glx.Data.Schema.VehicleSchema", null)
                         .WithMany()
                         .HasForeignKey("VehiclesId")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.CharacterSchema", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.PlanetSchema", "Planet")
+                    b.HasOne("Glx.Data.Schema.PlanetSchema", "Planet")
                         .WithMany("Residents")
                         .HasForeignKey("PlanetId")
                         .IsRequired();
@@ -510,9 +510,9 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
                     b.Navigation("Planet");
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.SpeciesSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.SpeciesSchema", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.PlanetSchema", "Planet")
+                    b.HasOne("Glx.Data.Schema.PlanetSchema", "Planet")
                         .WithMany()
                         .HasForeignKey("PlanetId");
 
@@ -521,12 +521,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Movies_Characters", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.CharacterSchema", null)
+                    b.HasOne("Glx.Data.Schema.CharacterSchema", null)
                         .WithMany()
                         .HasForeignKey("CharactersId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", null)
+                    b.HasOne("Glx.Data.Schema.MovieSchema", null)
                         .WithMany()
                         .HasForeignKey("MoviesId")
                         .IsRequired();
@@ -534,12 +534,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Movies_Planets", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", null)
+                    b.HasOne("Glx.Data.Schema.MovieSchema", null)
                         .WithMany()
                         .HasForeignKey("MoviesId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.PlanetSchema", null)
+                    b.HasOne("Glx.Data.Schema.PlanetSchema", null)
                         .WithMany()
                         .HasForeignKey("PlanetsId")
                         .IsRequired();
@@ -547,12 +547,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Movies_Species", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", null)
+                    b.HasOne("Glx.Data.Schema.MovieSchema", null)
                         .WithMany()
                         .HasForeignKey("MoviesId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.SpeciesSchema", null)
+                    b.HasOne("Glx.Data.Schema.SpeciesSchema", null)
                         .WithMany()
                         .HasForeignKey("SpeciesId")
                         .IsRequired();
@@ -560,12 +560,12 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Movies_Starships", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", null)
+                    b.HasOne("Glx.Data.Schema.MovieSchema", null)
                         .WithMany()
                         .HasForeignKey("MoviesId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.StarshipSchema", null)
+                    b.HasOne("Glx.Data.Schema.StarshipSchema", null)
                         .WithMany()
                         .HasForeignKey("StarshipsId")
                         .IsRequired();
@@ -573,18 +573,18 @@ namespace DropoutCoder.StarWars.Api.Data.Migrations
 
             modelBuilder.Entity("Movies_Vehicles", b =>
                 {
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.MovieSchema", null)
+                    b.HasOne("Glx.Data.Schema.MovieSchema", null)
                         .WithMany()
                         .HasForeignKey("MoviesId")
                         .IsRequired();
 
-                    b.HasOne("DropoutCoder.StarWars.Api.Data.Schema.VehicleSchema", null)
+                    b.HasOne("Glx.Data.Schema.VehicleSchema", null)
                         .WithMany()
                         .HasForeignKey("VehiclesId")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DropoutCoder.StarWars.Api.Data.Schema.PlanetSchema", b =>
+            modelBuilder.Entity("Glx.Data.Schema.PlanetSchema", b =>
                 {
                     b.Navigation("Residents");
                 });

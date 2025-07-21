@@ -14,7 +14,7 @@
         public ActionResult<IEnumerable<PlanetSchema>> Get(ODataQueryOptions<PlanetSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataPlanetQueryCounter.Add(1, new TagList { { nameof(version), version } });
+            //GlxODataDiagnostics.ODataPlanetQueryCounter.Add(1, new TagList { { nameof(version), version } });
 
             return Ok(Planets);
         }
@@ -24,7 +24,7 @@
         public async Task<ActionResult<PlanetSchema>> Get(long key, ODataQueryOptions<PlanetSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataPlanetDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
+            //GlxODataDiagnostics.ODataPlanetDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
 
             var result = await Planets.Where(ch => ch.Id == key).SingleOrDefaultAsync();
 

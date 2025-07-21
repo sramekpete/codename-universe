@@ -20,11 +20,11 @@ namespace Glx.OData {
             builder.Services.AddOpenTelemetry()
                 .WithMetrics(metric => {
                     metric
-                        .AddMeter(StarWarsODataDiagnostics.ODataQueryMeter.Name);
+                        .AddMeter(GlxODataDiagnostics.ODataQueryMeter.Name);
                 })
                 .WithTracing(tracing => {
                     tracing
-                        .AddSource(StarWarsODataDiagnostics.ActivitySource.Name);
+                        .AddSource(GlxODataDiagnostics.ActivitySource.Name);
                 });
 
             // Add services to the container.
@@ -84,7 +84,7 @@ namespace Glx.OData {
             });
 
             builder.Services
-                .AddDatabase(builder.Configuration["ConnectionStrings:StarWarsContext"]);
+                .AddDatabase(builder.Configuration["ConnectionStrings:GlxContext"]);
 
             builder.Services
                 .AddODataQueryCounter();

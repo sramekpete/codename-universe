@@ -9,7 +9,7 @@ public static class ServiceCollectionExtension {
         ArgumentNullException.ThrowIfNull(services);
 
         return services
-            .AddKeyedSingleton(nameof(StarWarsODataDiagnostics.ODataQueryCounter), StarWarsODataDiagnostics.ODataQueryCounter);
+            .AddKeyedSingleton(nameof(GlxODataDiagnostics.ODataQueryCounter), GlxODataDiagnostics.ODataQueryCounter);
     }
 
     public static IServiceCollection AddODataQueryMetricMiddelware(this IServiceCollection services) {

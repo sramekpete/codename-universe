@@ -14,7 +14,7 @@
         public ActionResult<IEnumerable<SpeciesSchema>> Get(ODataQueryOptions<SpeciesSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataSpeciesQueryCounter.Add(1, new TagList { { nameof(version), version } });
+            //GlxODataDiagnostics.ODataSpeciesQueryCounter.Add(1, new TagList { { nameof(version), version } });
 
             return Ok(Speciess);
         }
@@ -24,7 +24,7 @@
         public async Task<ActionResult<SpeciesSchema>> Get(long key, ODataQueryOptions<SpeciesSchema> options) {
             //var version = options.Request.RouteValues[ApiVersions.VersionRouteParameterName];
 
-            //StarWarsODataDiagnostics.ODataSpeciesDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
+            //GlxODataDiagnostics.ODataSpeciesDetailCounter.Add(1, new TagList { { nameof(key), key }, { nameof(version), version } });
 
             var result = await Speciess
                 .Where(ch => ch.Id == key)

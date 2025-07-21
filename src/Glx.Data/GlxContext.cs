@@ -3,8 +3,8 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
-    public class StarWarsContext : DbContext {
-        public StarWarsContext(DbContextOptions<StarWarsContext> options)
+    public class GlxContext : DbContext {
+        public GlxContext(DbContextOptions<GlxContext> options)
             : base(options) { }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder) {
