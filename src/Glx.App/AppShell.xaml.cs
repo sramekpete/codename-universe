@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.App
+﻿namespace Glx.App
 {
     public partial class AppShell : Shell
     {

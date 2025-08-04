@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.App.Platforms.Android
+﻿namespace Glx.App.Platforms.Android
 {
     using global::Android.App;
     using global::Android.Content.PM;

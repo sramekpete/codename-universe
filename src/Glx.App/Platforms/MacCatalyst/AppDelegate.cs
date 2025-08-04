@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.App.Platforms.MacCatalyst
+﻿namespace Glx.App.Platforms.MacCatalyst
 {
     using Foundation;
 

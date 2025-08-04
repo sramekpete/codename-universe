@@ -5,9 +5,11 @@ namespace Glx.OData {
     using Glx.OData.Diagnostics.Extensions;
     using Glx.OData.Versioning;
     using Glx.ServiceDefaults;
+    using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.OData;
     using Microsoft.Extensions.Options;
     using Microsoft.OData.ModelBuilder;
+    using Scalar.AspNetCore;
     using Swashbuckle.AspNetCore.SwaggerGen;
 
     public class Program {
@@ -71,7 +73,7 @@ namespace Glx.OData {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
-            //builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options => {
                 // add a custom operation filter which sets default values
                 options.OperationFilter<SwaggerDefaultValues>();
@@ -102,14 +104,16 @@ namespace Glx.OData {
                 app.UseODataRouteDebug();
 
                 app.UseSwagger();
-                app.UseSwaggerUI(options => {
+                app.MapScalarApiReference(options => {
                     var descriptions = app.DescribeApiVersions();
 
                     // build a swagger endpoint for each discovered API version
                     foreach (var description in descriptions) {
                         var url = $"/swagger/{description.GroupName}/swagger.json";
                         var name = description.GroupName.ToUpperInvariant();
-                        options.SwaggerEndpoint(url, name);
+
+                        options
+                            .AddDocument(name, name, url);
                     }
                 });
             }

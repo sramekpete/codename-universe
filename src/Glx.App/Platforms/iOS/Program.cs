@@ -1,4 +1,4 @@
-﻿namespace DropoutCoder.StarWars.App.Platforms.iOS
+﻿namespace Glx.App.Platforms.iOS
 {
     using ObjCRuntime;
     using UIKit;

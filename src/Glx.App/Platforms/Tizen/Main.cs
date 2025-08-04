@@ -1,4 +1,4 @@
-namespace DropoutCoder.StarWars.App
+namespace Glx.App
 {
     using Microsoft.Maui;
     using Microsoft.Maui.Hosting;
